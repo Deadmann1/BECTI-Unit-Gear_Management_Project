@@ -1,0 +1,28 @@
+﻿<Window x:Class="GearManagementProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GearManagementProject"
+        mc:Ignorable="d"
+        Title="GearManagementProject" Height="414.873" Width="623.893"
+        ResizeMode="NoResize">
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="174*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="cboxTableName" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="32,22,0,0" Height="19">
+            <ComboBoxItem Content="Units"/>
+            <ComboBoxItem Content="Gear"/>
+        </ComboBox>
+        <Label x:Name="lblInfo1" Content="Table" Margin="10,176,337.709,209"/>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="297" Margin="10,65,0,0" VerticalAlignment="Top" Width="588" Grid.ColumnSpan="2" PreviewKeyDown="DataGrid_PreviewKeyDown"/>
+        <Label Grid.Column="0" Content="Table&#xD;&#xA;" Margin="10,10,337.709,344"/>
+        <Button x:Name="btnLoad" Content="Load" Click="btnLoad_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="61" Grid.Column="1" Margin="109,13,0,0" Height="41" RenderTransformOrigin="0.68,0.314"/>
+        <Button x:Name="btnInsert" Content="Insert" Click="btnInsert_Click" Margin="318,13,235,330" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click" Margin="244,13,35,330"/>
+        <Button x:Name="btnRefresh" Content="Refresh" Click="btnRefresh_Click" Margin="169,13,109,330"/>
+        <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Column="1" Margin="175,13,0,0" Height="41" Click="btnExport_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,85 @@
+﻿<Window x:Class="GearManagementProject.InsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GearManagementProject"
+        mc:Ignorable="d"
+        Title="Change" Height="351.689" Width="882.739"
+        ResizeMode="NoResize">
+    <Grid Margin="0,0,3,0.4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="235*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="215,52,0,0" Height="22" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+            <ComboBoxItem Content="Unit"/>
+            <ComboBoxItem Content="Gear"/>
+        </ComboBox>
+        <Label x:Name="label" Content="Erstellen und Updaten von Unit/Gear" Margin="32,13,32.4,44.82" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="label2" Content="Typ:" HorizontalAlignment="Left" Margin="52,48,0,0" VerticalAlignment="Top" Height="26" Width="30"/>
+        <Label x:Name="label3" Content="ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="52,7.18,0,0" Width="29" Grid.Row="1"/>
+        <Grid x:Name="gridGear" HorizontalAlignment="Left" Height="153" Margin="52,52.18,0,0" VerticalAlignment="Top" Width="282" Grid.Row="1" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*" />
+                <ColumnDefinition Width="61*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Content="Name:" Margin="0,0,1,0"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="Adresse:" Margin="0,0,1,0"/>
+            <TextBox x:Name="txtBoxName" Grid.Column="1" Margin="3,0,-0.4,0"/>
+            <TextBox x:Name="txtBoxAdresse" Grid.Row="2" Margin="3,0,-0.4,0" Grid.Column="1"/>
+            <Label x:Name="label4" Content="Label" HorizontalAlignment="Left" Margin="30,3,0,0" Grid.Row="5" VerticalAlignment="Top" Height="26" Width="38"/>
+        </Grid>
+        <Grid x:Name="gridUnit" HorizontalAlignment="Left" Height="153" Margin="52,52.2,0,0" VerticalAlignment="Top" Width="283" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="161*" />
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="122*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Content="Jahresumsatz:" Margin="0,0,1.8,0"/>
+            <Label Grid.Column="0" Grid.Row="2" Content="Kreditlimit:" Margin="0,0,1.8,0"/>
+            <Label Grid.Column="0" Grid.Row="4" Content="Zahlungsbedingung:" Margin="0,0,1.8,0"/>
+
+            <TextBox x:Name="txtBoxJahresumsatz" Grid.Column="2" Grid.Row="0" Margin="1.2,0,0.2,0"/>
+            <TextBox x:Name="txtBoxKredit" Grid.Column="2" Grid.Row="2" Margin="1.2,0,0.2,0"/>
+            <TextBox x:Name="txtBoxBedingungen" Grid.Column="2" Grid.Row="4" Margin="1.2,0,0.2,0"/>
+        </Grid>
+        <TextBox x:Name="txtBoxID" Grid.Row="1" Margin="215,3,538,204"/>
+        <Button x:Name="btnInsert" Content="Insert" Click="btnInsert_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="52,210.18,0,0" Grid.Row="1"/>
+        <Button x:Name="btnCancle" Content="Cancle" Click="btnCancle_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="248,210,0,0" Grid.Row="1"/>
+        <Button x:Name="btnUpdate" Content="Update" Click="btnUpdate_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="149,210.2,0,0" Grid.Row="1"/>
+
+    </Grid>
+</Window>
