@@ -1,6 +1,9 @@
 # BECTI-Unit-Gear_Management_Project
-This is my standalone gear manager for the popular mission by Benny, in the videogame Armed Assault 3.
+This is my standalone gear manager for the gamemode BECTI (Benny Capture the Island) by Benny, in the videogame Armed Assault 3.
 
-You can generate a gear and untis file, which you can replace in your mission file to add or remove, modded or vanilla items, units and vehicles.
+You can load the gear and untis files, which you can then modfiy/backup/replace etc.
 
-It currently uses a MySql Server, but support for other databases will be coming soon.
+Compatibility:
+All missions based on Benny's BECTI should work, if they are using the same structure of files for gear/units/vehicles.
+
+All used licensed parts belong to their respective authors.
